@@ -163,6 +163,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system">
                                             <color key="baseForegroundColor" red="0.68036872150000005" green="0.064933583140000001" blue="0.34453049299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="5PQ-wK-803" eventType="touchUpInside" id="GPI-h8-63m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,6 +201,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hbp-4d-TV4"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="PXU-4s-8bX" id="ywL-fK-Yrd"/>
+                        <outlet property="tableView" destination="OYP-Ul-SJ9" id="LSX-65-sfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbb-02-ijp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19DDC35213D34FD109EEB3AD /* Pods_CoolChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A559C79E91215FF236A16BC /* Pods_CoolChat.framework */; };
 		D9111E61293A415700899BFD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9111E60293A415700899BFD /* RegisterViewController.swift */; };
 		D9111E63293A4C1D00899BFD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9111E62293A4C1D00899BFD /* LogInViewController.swift */; };
+		D9617EBA293B9BA500AD6033 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9617EB9293B9BA500AD6033 /* GoogleService-Info.plist */; };
 		D96927C1293911C300A56FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96927C0293911C300A56FE9 /* AppDelegate.swift */; };
 		D96927C3293911C300A56FE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96927C2293911C300A56FE9 /* SceneDelegate.swift */; };
 		D96927C8293911C300A56FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96927C6293911C300A56FE9 /* Main.storyboard */; };
@@ -19,8 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A559C79E91215FF236A16BC /* Pods_CoolChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A445DF6AF03B588D777F19F9 /* Pods-CoolChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolChat.release.xcconfig"; path = "Target Support Files/Pods-CoolChat/Pods-CoolChat.release.xcconfig"; sourceTree = "<group>"; };
 		D9111E60293A415700899BFD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D9111E62293A4C1D00899BFD /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		D9617EB9293B9BA500AD6033 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D96927BD293911C300A56FE9 /* CoolChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96927C0293911C300A56FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D96927C2293911C300A56FE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		D96927CE293911C400A56FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D96927D629391F4500A56FE9 /* WelcomeCoolChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoolChatViewController.swift; sourceTree = "<group>"; };
 		D9F187FD293B908100167D31 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E5ABBF3B415D5B858E888DD2 /* Pods-CoolChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolChat.debug.xcconfig"; path = "Target Support Files/Pods-CoolChat/Pods-CoolChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DDC35213D34FD109EEB3AD /* Pods_CoolChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1898C179D2A4D78176C076 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A559C79E91215FF236A16BC /* Pods_CoolChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		325A17672C521B1DA8F99F71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5ABBF3B415D5B858E888DD2 /* Pods-CoolChat.debug.xcconfig */,
+				A445DF6AF03B588D777F19F9 /* Pods-CoolChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D96927B4293911C300A56FE9 = {
 			isa = PBXGroup;
 			children = (
 				D96927BF293911C300A56FE9 /* Final Project CoolChat */,
 				D96927BE293911C300A56FE9 /* Products */,
+				325A17672C521B1DA8F99F71 /* Pods */,
+				1D1898C179D2A4D78176C076 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +96,7 @@
 				D96927C9293911C400A56FE9 /* Assets.xcassets */,
 				D96927CB293911C400A56FE9 /* LaunchScreen.storyboard */,
 				D96927CE293911C400A56FE9 /* Info.plist */,
+				D9617EB9293B9BA500AD6033 /* GoogleService-Info.plist */,
 			);
 			path = "Final Project CoolChat";
 			sourceTree = "<group>";
@@ -99,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D96927D1293911C400A56FE9 /* Build configuration list for PBXNativeTarget "CoolChat" */;
 			buildPhases = (
+				820B554FE4C399A12741F86B /* [CP] Check Pods Manifest.lock */,
 				D96927B9293911C300A56FE9 /* Sources */,
 				D96927BA293911C300A56FE9 /* Frameworks */,
 				D96927BB293911C300A56FE9 /* Resources */,
+				D2A9308179777466B2AD1D29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,12 +181,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				D96927CD293911C400A56FE9 /* LaunchScreen.storyboard in Resources */,
+				D9617EBA293B9BA500AD6033 /* GoogleService-Info.plist in Resources */,
 				D96927CA293911C400A56FE9 /* Assets.xcassets in Resources */,
 				D96927C8293911C300A56FE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		820B554FE4C399A12741F86B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A9308179777466B2AD1D29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoolChat/Pods-CoolChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoolChat/Pods-CoolChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoolChat/Pods-CoolChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D96927B9293911C300A56FE9 /* Sources */ = {
@@ -310,6 +383,7 @@
 		};
 		D96927D2293911C400A56FE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5ABBF3B415D5B858E888DD2 /* Pods-CoolChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -338,6 +412,7 @@
 		};
 		D96927D3293911C400A56FE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A445DF6AF03B588D777F19F9 /* Pods-CoolChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
