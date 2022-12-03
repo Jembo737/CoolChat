@@ -9,6 +9,9 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +29,7 @@ class ChatViewController: UIViewController {
     }
     */
 
+    @IBAction func sendPressed(_ sender: UIButton) {
+        
+    }
 }
