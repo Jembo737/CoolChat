@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "chat-reste-cool-animaux-chats-france-intermediaire-peinture-par-numeros-figuredart-free-shipping-825_1024x1024@2x.png 2.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "chat-reste-cool-animaux-chats-france-intermediaire-peinture-par-numeros-figuredart-free-shipping-825_1024x1024@2x.png.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "chat-reste-cool-animaux-chats-france-intermediaire-peinture-par-numeros-figuredart-free-shipping-825_1024x1024@2x.png 1.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
