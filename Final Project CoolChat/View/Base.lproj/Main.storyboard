@@ -85,12 +85,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QHY-X6-sfU" userLabel="LogInTextFields">
                                 <rect key="frame" x="70" y="123" width="253" height="178"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-fi-AkQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-fi-AkQ">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-1x-zVc">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-1x-zVc">
                                         <rect key="frame" x="0.0" y="64" width="253" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -103,7 +103,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="5PQ-wK-803" kind="show" identifier="LogInToChat" id="aOB-26-DTe"/>
+                                            <action selector="logInPressed:" destination="3GD-cl-aoO" eventType="touchUpInside" id="v9w-Fj-Mc8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Dhx-fi-AkQ" id="qsp-G7-8Zx"/>
                         <outlet property="passwordTextField" destination="WVP-1x-zVc" id="ILm-GW-W1m"/>
+                        <segue destination="5PQ-wK-803" kind="show" identifier="LogInToChat" id="Cam-Sk-tQs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atW-aM-Tyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,7 +201,14 @@
                             <constraint firstItem="jpa-ay-DCi" firstAttribute="trailing" secondItem="yQ8-Gx-yGx" secondAttribute="trailing" id="yt6-Hc-KfL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hbp-4d-TV4"/>
+                    <navigationItem key="navigationItem" id="hbp-4d-TV4">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="68h-Zh-cPi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="5PQ-wK-803" id="BKl-oK-abr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="PXU-4s-8bX" id="ywL-fK-Yrd"/>
                         <outlet property="tableView" destination="OYP-Ul-SJ9" id="LSX-65-sfw"/>
@@ -240,7 +248,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="registerButtonPressed:" destination="s7B-TI-OmS" eventType="touchUpInside" id="uPi-O0-GZf"/>
-                                            <segue destination="5PQ-wK-803" kind="show" identifier="RegisterToChat" id="WKO-iV-qX6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -263,6 +270,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="bC9-rq-JBW" id="a7H-tl-FbX"/>
                         <outlet property="passwordTextField" destination="cPB-WF-8wS" id="wYm-Lv-Pg2"/>
+                        <segue destination="5PQ-wK-803" kind="show" identifier="RegisterToChat" id="B2c-uw-2fS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCR-nA-WGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,7 +298,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WKO-iV-qX6"/>
+        <segue reference="Cam-Sk-tQs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ChatViewBackgound" width="533.33331298828125" height="300"/>
