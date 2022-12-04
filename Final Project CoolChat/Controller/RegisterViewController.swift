@@ -6,30 +6,38 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class RegisterViewController: UIViewController {
-    
-    @IBOutlet weak var emailTextField: UITextField? {
+    @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField?.layer.cornerRadius = 20
             emailTextField?.clipsToBounds = true
         }
     }
-    @IBOutlet weak var passwordTextField: UITextField? {
+    @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
             passwordTextField?.layer.cornerRadius = 20
             passwordTextField?.clipsToBounds = true
+            //            To turn off PasswordAutofill
+            passwordTextField.textContentType = .oneTimeCode
         }
     }
+ 
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    //                    Navigate to the ChatViewController
+                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                }
+            }
+        }
     }
-    
-    
-    
-    
 }
