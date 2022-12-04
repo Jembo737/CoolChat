@@ -13,22 +13,19 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
+    var message: [Message] = [
+    Message(sender: "me", body: "HI")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "🤟🏻CoolChat🤟🏻"
+        tableView.dataSource = self
+        title = K.appName
         navigationItem.hidesBackButton = true
+        
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func sendPressed(_ sender: UIButton) {
         
     }
@@ -45,3 +42,18 @@ class ChatViewController: UIViewController {
       
     }
 }
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        message.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.label.text = message[indexPath.row].body
+        return cell
+    }
+    
+    
+}
+

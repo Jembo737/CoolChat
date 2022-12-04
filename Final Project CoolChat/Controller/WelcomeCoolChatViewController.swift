@@ -25,7 +25,7 @@ class CoolChatViewController: UIViewController {
 // Title animation
         titleLabel.text = ""
         var charIndex = 0.0
-        let titleText = "🤟🏻CoolChat🤟🏻"
+        let titleText = K.appName
         for letter in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { timer in
                 self.titleLabel.text?.append(letter)
