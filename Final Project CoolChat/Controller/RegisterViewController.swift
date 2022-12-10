@@ -26,8 +26,7 @@ class RegisterViewController: UIViewController {
     }
  
     
-    
-    
+    //MARK: - Use of notification mechanism
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in

@@ -22,7 +22,7 @@ class CoolChatViewController: UIViewController {
     }
     
     func updateUI() {
-// Title animation
+//MARK: - Use of view animation
         titleLabel.text = ""
         var charIndex = 0.0
         let titleText = K.appName

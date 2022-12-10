@@ -21,6 +21,7 @@
 		D9BB8181293CECEC00FCA74E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB8180293CECEC00FCA74E /* Message.swift */; };
 		D9BB8184293CF0FA00FCA74E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB8182293CF0FA00FCA74E /* MessageCell.swift */; };
 		D9BB8185293CF0FA00FCA74E /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BB8183293CF0FA00FCA74E /* MessageCell.xib */; };
+		D9DF972E2943F072007F7482 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9DF972D2943F072007F7482 /* IQKeyboardManagerSwift */; };
 		D9F187FE293B908100167D31 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F187FD293B908100167D31 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		D9BB8180293CECEC00FCA74E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D9BB8182293CF0FA00FCA74E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		D9BB8183293CF0FA00FCA74E /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		D9C4210F2944E01E00ED3CBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D9F187FD293B908100167D31 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E5ABBF3B415D5B858E888DD2 /* Pods-CoolChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolChat.debug.xcconfig"; path = "Target Support Files/Pods-CoolChat/Pods-CoolChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19DDC35213D34FD109EEB3AD /* Pods_CoolChat.framework in Frameworks */,
+				D9DF972E2943F072007F7482 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		D96927B4293911C300A56FE9 = {
 			isa = PBXGroup;
 			children = (
+				D9C4210F2944E01E00ED3CBC /* README.md */,
 				D96927BF293911C300A56FE9 /* Final Project CoolChat */,
 				D96927BE293911C300A56FE9 /* Products */,
 				325A17672C521B1DA8F99F71 /* Pods */,
@@ -157,6 +161,9 @@
 			dependencies = (
 			);
 			name = CoolChat;
+			packageProductDependencies = (
+				D9DF972D2943F072007F7482 /* IQKeyboardManagerSwift */,
+			);
 			productName = "Final Project CoolChat";
 			productReference = D96927BD293911C300A56FE9 /* CoolChat.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +192,9 @@
 				Base,
 			);
 			mainGroup = D96927B4293911C300A56FE9;
+			packageReferences = (
+				D9DF972C2943F072007F7482 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = D96927BE293911C300A56FE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -484,6 +494,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9DF972C2943F072007F7482 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9DF972D2943F072007F7482 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9DF972C2943F072007F7482 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D96927B5293911C300A56FE9 /* Project object */;
 }

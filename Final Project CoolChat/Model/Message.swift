@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//MARK: - Use of struct
 struct Message {
     let sender: String
     let body: String
